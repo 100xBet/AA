@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>JobMatch — AI Job Application Assistant</title>
+<meta name="description" content="Paste a job posting, get an instant AI match score and a personalized cover letter, and send it automatically.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+
+<style>
+  /* Prevents a flash of unstyled white page while app.bundle.js loads */
+  html, body { background: #000; margin: 0; }
+</style>
+</head>
+<body>
+
+<div id="root"></div>
+
+<!--
+  ════════════════════════════════════════════════════════════════════
+  SITE CONFIGURATION — edit this block, nothing else, to turn on
+  automatic AI analysis and automatic email sending for every visitor.
+
+  Leave any value as "" (empty quotes) to skip that feature for now —
+  the app still works, it just shows a clear "not set up yet" message
+  for that part instead of crashing.
+
+  Full step-by-step instructions for getting these four values are in
+  README.md. None of them are secret; they're safe to be visible here.
+  ════════════════════════════════════════════════════════════════════
+-->
+<script>
+  window.JOBMATCH_CONFIG = {
+    // Your deployed Cloudflare Worker URL. Example:
+    // "https://jobmatch-proxy.yourname.workers.dev"
+    PROXY_URL: "",
+
+    // From your EmailJS dashboard (Email Services / Email Templates / Account → API Keys):
+    EMAILJS_SERVICE_ID: "",
+    EMAILJS_TEMPLATE_ID: "",
+    EMAILJS_PUBLIC_KEY: ""
+  };
+</script>
+
+<!-- The compiled app. You never need to open or edit this file. -->
+<script src="app.bundle.js"></script>
+
+</body>
+</html>
